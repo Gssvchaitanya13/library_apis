@@ -5,11 +5,29 @@ import java.util.Date;
 
 public class Book {
 
-    private String bookTitle;
+    private int id;
 
-    private  String bookAuthor;
+    private String title;
 
-    private String bookType;
+    private  String authorName;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    private String genre;
 
     public Date getPublishedDate() {
         return publishedDate;
@@ -21,29 +39,23 @@ public class Book {
 
     private Date publishedDate;
 
-    public String getBookType() {
-        return bookType;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setBookType(String bookType) {
-        this.bookType = bookType;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
-    public String getBookTitle() {
-        return bookTitle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setBookTitle(String bookTitle) {
-        this.bookTitle = bookTitle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getBookAuthor() {
-        return bookAuthor;
-    }
 
-    public void setBookAuthor(String bookAuthor) {
-        this.bookAuthor = bookAuthor;
-    }
 
 
 }
