@@ -1,32 +1,36 @@
 package com.ssvlearning.library.controller;
 
 
+import com.ssvlearning.library.model.Book;
 import com.ssvlearning.library.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class BookController {
 
     @Autowired
     private BookService bookService;
+
     @GetMapping("/books")
-    public String getBooks(){
+    public List<Book> getBooks() {
         return bookService.getBooks();
     }
 
     @PostMapping("/books/add")
-    public String updateBooks(){
-        return bookService.updateBook();
+    public Book addBooks(@RequestBody Book book) {
+        return bookService.addBook(book);
     }
 
     @PutMapping("/books/update")
-    public String addBooks(){
-        return bookService.addBook();
+    public Book updateBooks(@RequestBody Book book) {
+        return bookService.updateBook(book);
     }
 
-    @DeleteMapping("/books/delete")
-    public  String deleteBooks(){
-        return bookService.deleteBook();
+    @DeleteMapping("/books/delete/{bookId}")
+    public void deleteBooks(@PathVariable int bookId) {
+        bookService.deleteBook(bookId);
     }
 }

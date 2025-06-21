@@ -1,12 +1,16 @@
 package com.ssvlearning.library.service;
 
+import com.ssvlearning.library.model.Book;
+
+import java.util.List;
+
 public interface BookService {
 
-    public String getBooks();
+    public List<Book> getBooks();
 
-    public String updateBook();
+    Book updateBook(Book book);
 
-    public String addBook();
+    Book addBook(Book book);
 
-    public  String deleteBook();
+    public  void deleteBook(int bookId);
 }

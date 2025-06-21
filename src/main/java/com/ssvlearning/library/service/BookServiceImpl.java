@@ -1,8 +1,11 @@
 package com.ssvlearning.library.service;
 
+import com.ssvlearning.library.model.Book;
 import com.ssvlearning.library.repository.BookRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class BookServiceImpl implements BookService
@@ -14,22 +17,22 @@ public class BookServiceImpl implements BookService
 
 
     @Override
-    public String getBooks(){
+    public List<Book> getBooks(){
         return libraryRepo.getBooks();
     }
 
     @Override
-    public String updateBook() {
-        return libraryRepo.updateBook();
+    public Book updateBook(Book book) {
+        return libraryRepo.updateBook(book);
     }
 
     @Override
-    public String addBook() {
-        return libraryRepo.addBook();
+    public Book addBook(Book book) {
+        return libraryRepo.addBook(book);
     }
 
     @Override
-    public String deleteBook() {
-        return libraryRepo.deleteBook();
+    public void deleteBook(int bookId) {
+         libraryRepo.deleteBook(bookId);
     }
 }

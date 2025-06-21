@@ -1,6 +1,7 @@
 package com.ssvlearning.library.model;
 
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Book {
@@ -29,15 +30,28 @@ public class Book {
 
     private String genre;
 
-    public Date getPublishedDate() {
+
+
+    private LocalDate publishedDate;
+
+    public LocalDate getPublishedDate() {
         return publishedDate;
     }
 
-    public void setPublishedDate(Date publishedDate) {
+    public void setPublishedDate(LocalDate publishedDate) {
         this.publishedDate = publishedDate;
     }
 
-    private Date publishedDate;
+    public Book() {
+    }
+
+    public Book(int id, String title, String authorName, String genre, LocalDate publishedDate) {
+        this.id = id;
+        this.title = title;
+        this.authorName = authorName;
+        this.genre = genre;
+        this.publishedDate = publishedDate;
+    }
 
     public String getGenre() {
         return genre;
