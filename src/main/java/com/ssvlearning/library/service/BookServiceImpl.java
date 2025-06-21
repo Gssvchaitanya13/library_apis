@@ -1,15 +1,14 @@
 package com.ssvlearning.library.service;
 
-import com.ssvlearning.library.repository.LibraryDefaultRepoImpl;
-import com.ssvlearning.library.repository.LibraryRepo;
+import com.ssvlearning.library.repository.BookRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class LibraryServiceImpl implements LibraryService
+public class BookServiceImpl implements BookService
 {
     @Autowired
-    private LibraryRepo libraryRepo;
+    private BookRepo libraryRepo;
 
     @Override
     public String getBooks(){

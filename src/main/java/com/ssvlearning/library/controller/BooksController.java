@@ -1,15 +1,15 @@
 package com.ssvlearning.library.controller;
 
 
-import com.ssvlearning.library.service.LibraryServiceImpl;
+import com.ssvlearning.library.service.BookServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class LibraryController {
+public class BooksController {
 
     @Autowired
-    private LibraryServiceImpl libraryService;
+    private BookServiceImpl libraryService;
     @GetMapping("/books")
     public String getBooks(){
         return libraryService.getBooks();

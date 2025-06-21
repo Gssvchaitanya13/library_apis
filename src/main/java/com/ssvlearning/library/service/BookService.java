@@ -1,6 +1,6 @@
 package com.ssvlearning.library.service;
 
-public interface LibraryService {
+public interface BookService {
 
     public String getBooks();
 

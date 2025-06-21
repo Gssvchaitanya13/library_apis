@@ -1,6 +1,6 @@
 package com.ssvlearning.library.repository;
 
-public interface LibraryRepo {
+public interface BookRepo {
 
     public String getBooks();
 

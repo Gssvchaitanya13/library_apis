@@ -1,10 +1,9 @@
 package com.ssvlearning.library.repository;
 
-import com.ssvlearning.library.service.LibraryService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class LibraryDefaultRepoImpl implements LibraryRepo
+public class BookDefaultRepoImpl implements BookRepo
 {
     @Override
     public String getBooks(){
