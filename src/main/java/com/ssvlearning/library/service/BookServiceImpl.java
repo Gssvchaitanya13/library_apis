@@ -10,23 +10,26 @@ public class BookServiceImpl implements BookService
     @Autowired
     private BookRepo libraryRepo;
 
+
+
+
     @Override
     public String getBooks(){
         return libraryRepo.getBooks();
     }
 
     @Override
-    public String updateBooks() {
-        return libraryRepo.updateBooks();
+    public String updateBook() {
+        return libraryRepo.updateBook();
     }
 
     @Override
-    public String addBooks() {
-        return libraryRepo.addBooks();
+    public String addBook() {
+        return libraryRepo.addBook();
     }
 
     @Override
-    public String deleteBooks() {
-        return libraryRepo.deleteBooks();
+    public String deleteBook() {
+        return libraryRepo.deleteBook();
     }
 }

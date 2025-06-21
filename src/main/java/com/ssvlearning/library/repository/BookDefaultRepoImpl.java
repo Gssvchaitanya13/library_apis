@@ -11,17 +11,17 @@ public class BookDefaultRepoImpl implements BookRepo
     }
 
     @Override
-    public String updateBooks() {
+    public String updateBook() {
         return "Books updated succesfully";
     }
 
     @Override
-    public String addBooks() {
+    public String addBook() {
         return "Books added succesfully";
     }
 
     @Override
-    public String deleteBooks() {
+    public String deleteBook() {
         return "Books deleted succesfully";
     }
 }

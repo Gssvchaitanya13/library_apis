@@ -4,9 +4,9 @@ public interface BookRepo {
 
     public String getBooks();
 
-    public String updateBooks();
+    public String updateBook();
 
-    public String addBooks();
+    public String addBook();
 
-    public  String deleteBooks();
+    public  String deleteBook();
 }
